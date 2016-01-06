@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+                <!--activity chat-->
+
+    <color name="toolbar">#4486ff</color>
+    <color name="toolbar_title">#929497</color>
+
+    <color name="main">#FFFFFF</color>
+
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">#616264</color>
+
+
+    <color name="bubble_my">#f1f1f2</color>
+    <color name="bubble_not_my">#ffffff</color>
+
+    <!--chat window-->
+    <!--chat bottom_bar-->
+    <color name="bottom_bar_1">#c0ced1</color>
+    <color name="bottom_bar">#ffffff</color>
+    <color name="bottom_bar_top_line">#F1F2F2</color>
+
+    <color name="chat_item_text">#A4000000</color>
+    <color name="empty_text">#A4000000</color>
+
+    <!--chat item-->
+    <color name="date">#bbbdbf</color>
+    <color name="text">#a6a8ab</color>
+    <color name="username">#808184</color>
+
+
+    <color name="message_hint">#a6a8ab</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+</resources>

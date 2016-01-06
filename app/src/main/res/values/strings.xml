@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Chat</string>
+    <string name="error_log_in">Couldn\'t log in</string>
+    <string name="chat_empty_view">No messages yet</string>
+    <string name="message_hint">Message</string>
+    <string name="error_no_connection">No internet connection</string>
+    <string name="send_message">Send message</string>
+
+
+</resources>
