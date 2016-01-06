@@ -5,15 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bubble_message"
-    android:orientation="horizontal">
+    android:gravity="right"
+    android:layout_marginBottom="3dp"
+    android:layout_marginRight="@dimen/chat_item_margin"
+    android:layout_marginEnd="@dimen/chat_item_margin"
+    android:layout_marginTop="4dp"
+    android:orientation="vertical">
 
-    <com.example.chat.view.SquareImageView
-        android:id="@+id/chat_item_image"
+    <TextView
+        android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="@dimen/chat_item_image_height"
+        android:gravity="right|bottom"
+        style="@style/ChatItemDate"/>
+
+    <com.example.chat.view.SquareImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
+        android:maxWidth="@dimen/chat_item_image_height"
         android:src="@drawable/placeholder"/>
 
 </LinearLayout>

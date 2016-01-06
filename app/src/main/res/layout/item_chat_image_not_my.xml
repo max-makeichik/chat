@@ -2,10 +2,9 @@
 <LinearLayout
     android:id="@+id/linear"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="200dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="3dp"
-    android:layout_marginTop="4dp"
+    android:background="@drawable/bubble_message"
     android:layout_marginLeft="@dimen/chat_item_margin"
     android:layout_marginStart="@dimen/chat_item_margin"
     android:orientation="vertical">
@@ -23,25 +22,26 @@
 
         <TextView
             android:id="@+id/username"
+            style="@style/ChatItemUsername"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/ChatItemUsername"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/date"
+        style="@style/ChatItemDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        style="@style/ChatItemDate"/>
+        android:gravity="bottom|right"/>
 
-    <com.example.chat.utils.ChatBubbleButtonNotMy
-        android:id="@+id/textNotMy"
-        android:layout_width="200dp"
+    <com.example.chat.view.SquareImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:layout_marginLeft="10dp"
-        style="@style/ChatItemText"/>
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:maxWidth="@dimen/chat_item_image_height"
+        android:src="@drawable/placeholder"/>
 
 </LinearLayout>

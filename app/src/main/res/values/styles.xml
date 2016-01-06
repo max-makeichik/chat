@@ -8,4 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ChatItemDate">
+        <item name="android:textColor">@color/date</item>
+        <item name="android:text">12:15 PM</item>
+    </style>
+
+    <style name="ChatItemUsername">
+        <item name="android:text">Username</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="ChatItemText">
+        <item name="android:text">afwf werfg ergerg ergerg ergte</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
 </resources>

@@ -13,6 +13,7 @@
     <color name="colorAccent">#616264</color>
 
 
+    <color name="bubble_stroke">#d1d3d4</color>
     <color name="bubble_my">#f1f1f2</color>
     <color name="bubble_not_my">#ffffff</color>
 

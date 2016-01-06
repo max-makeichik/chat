@@ -12,6 +12,8 @@
     <integer name="chat_item_text_max_length">90</integer>
 
     <dimen name="empty_text_size">20sp</dimen>
+    <dimen name="bubble_stroke_width">1dp</dimen>
+    <dimen name="bubble_corner_radius">4dp</dimen>
 
     <!--chat bottom_bar-->
     <dimen name="bottom_bar_height">44dp</dimen>
