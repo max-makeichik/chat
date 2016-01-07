@@ -15,10 +15,20 @@
     <dimen name="bubble_stroke_width">1dp</dimen>
     <dimen name="bubble_corner_radius">4dp</dimen>
 
+    <dimen name="chat_item_side_margin">3dp</dimen>
+    <dimen name="chat_item_margin">20dp</dimen>
+
+    <integer name="chat_item_margin">40</integer>
+    <integer name="chat_item_side_margin">3</integer>
+    <integer name="chat_item_top_padding">10</integer>
+
+    <dimen name="chat_item_min_width">100dp</dimen>
+    <dimen name="chat_item_image_padding">10dp</dimen>
+    <dimen name="chat_item_image_start_padding">16dp</dimen>
+
     <!--chat bottom_bar-->
     <dimen name="bottom_bar_height">44dp</dimen>
     <dimen name="chat_list_margin_bottom">2dp</dimen>
     <dimen name="send_button_text_size">14sp</dimen>
-    <dimen name="chat_item_margin">10dp</dimen>
 
 </resources>

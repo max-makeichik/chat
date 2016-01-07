@@ -63,21 +63,15 @@ public class ChatFragment extends Fragment {
     }
 
     DataFactory df = new DataFactory();
-    ChatMessage chatMessage1 = new ChatMessage("Max", null, "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
-    ChatMessage chatMessage2 = new ChatMessage(null, df.getRandomText(15, 50), "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
-    ChatMessage chatMessage3 = new ChatMessage(null, df.getRandomText(15, 50), "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
-    ChatMessage chatMessage4 = new ChatMessage("Max", null, "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
-    ChatMessage chatMessage5 = new ChatMessage(null, df.getRandomText(15, 50), "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
-    ChatMessage chatMessage6 = new ChatMessage("Max", df.getRandomText(15, 50), "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
+    ChatMessage chatMessage1 = new ChatMessage(df.getRandomText(5, 30), null, "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
+    ChatMessage chatMessage2 = new ChatMessage(null, df.getRandomText(95, 150), null, df.getBirthDate());
+    ChatMessage chatMessage4 = new ChatMessage(df.getRandomText(5, 30), df.getRandomText(15, 50), "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
     ChatMessage chatMessage7 = new ChatMessage(null, null, "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
-    ChatMessage chatMessage8 = new ChatMessage("Max", df.getRandomText(15, 50), "http://weknowyourdreams.com/images/girl/girl-08.jpg", df.getBirthDate());
+    ChatMessage chatMessage8 = new ChatMessage(df.getRandomText(5, 30), df.getRandomText(95, 150), null, df.getBirthDate());
 
     chatList.add(chatMessage1);
     chatList.add(chatMessage2);
-    chatList.add(chatMessage3);
     chatList.add(chatMessage4);
-    chatList.add(chatMessage5);
-    chatList.add(chatMessage6);
     chatList.add(chatMessage7);
     chatList.add(chatMessage8);
 

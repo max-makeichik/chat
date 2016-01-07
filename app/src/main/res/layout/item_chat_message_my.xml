@@ -2,29 +2,34 @@
 <LinearLayout
     android:id="@+id/linear"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="3dp"
-    android:layout_marginEnd="@dimen/chat_item_margin"
-    android:layout_marginRight="@dimen/chat_item_margin"
-    android:layout_marginTop="4dp"
     android:gravity="right"
     android:orientation="vertical">
 
     <TextView
-        style="@style/ChatItemDate"
         android:id="@+id/date"
+        style="@style/ChatItemDate"
+        android:paddingRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="right|bottom"/>
 
-    <com.example.chat.utils.ChatBubbleButtonMy
-        android:id="@+id/textMy"
-        android:layout_width="200dp"
+    <FrameLayout
+        android:id="@+id/bubble_layout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_marginRight="10dp"
-        android:padding="30dp"
-        style="@style/ChatItemText"/>
+        android:minWidth="@dimen/chat_item_min_width"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text"
+            style="@style/ChatItemText"
+            android:padding="15dp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
 
 </LinearLayout>

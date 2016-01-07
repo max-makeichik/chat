@@ -3,10 +3,13 @@ package com.example.chat.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.graphics.Point;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.preference.PreferenceManager;
 import android.util.TypedValue;
+import android.view.Display;
+import android.view.WindowManager;
 
 public class Utils {
 
@@ -43,4 +46,13 @@ public class Utils {
                 r.getDisplayMetrics()
         );
     }
+
+  public static int getMargin(Context context){
+    WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+    Display display = wm.getDefaultDisplay();
+    Point size = new Point();
+    display.getSize(size);
+    int width = size.x;
+    return (int) (width * 0.4);
+  }
 }

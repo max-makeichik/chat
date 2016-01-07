@@ -14,13 +14,20 @@
     </style>
 
     <style name="ChatItemUsername">
-        <item name="android:text">Username</item>
         <item name="android:layout_gravity">center</item>
+        <item name="android:paddingLeft">5dp</item>
     </style>
 
     <style name="ChatItemText">
-        <item name="android:text">afwf werfg ergerg ergerg ergte</item>
         <item name="android:textColor">@color/text</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="ChatItemImage">
+        <item name="android:maxWidth">@dimen/chat_item_image_height</item>
+        <item name="android:maxHeight">@dimen/chat_item_image_height</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
     </style>
 
 </resources>

@@ -2,46 +2,55 @@
 <LinearLayout
     android:id="@+id/linear"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="200dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="3dp"
+    android:layout_marginLeft="@dimen/chat_item_side_margin"
+    android:layout_marginStart="@dimen/chat_item_side_margin"
     android:layout_marginTop="4dp"
-    android:layout_marginLeft="@dimen/chat_item_margin"
-    android:layout_marginStart="@dimen/chat_item_margin"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
+            android:background="@drawable/image_button"
             android:src="@drawable/ic_account"/>
 
         <TextView
             android:id="@+id/username"
+            style="@style/ChatItemUsername"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/ChatItemUsername"/>
-
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <TextView
         android:id="@+id/date"
+        style="@style/ChatItemDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        style="@style/ChatItemDate"/>
+        android:gravity="bottom|right"
+        android:paddingLeft="5dp"/>
 
-    <com.example.chat.utils.ChatBubbleButtonNotMy
-        android:id="@+id/textNotMy"
-        android:layout_width="200dp"
+    <FrameLayout
+        android:id="@+id/bubble_layout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:layout_marginLeft="10dp"
-        style="@style/ChatItemText"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text"
+            style="@style/ChatItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="15dp"/>
+
+    </FrameLayout>
 
 </LinearLayout>
