@@ -66,9 +66,9 @@
 -keep class sun.misc.Unsafe { *; }
 #-keep class com.google.gson.stream.** { *; }
 # Application classes that will be serialized/deserialized over Gson
--keep class com.example.chat.model.ChatItem { *; }
--keep class com.example.chat.model.ChatItem { *; }
--keep class com.example.chat.model.ChatItem { *; }
+-keep class com.example.chat.model.ChatMessage { *; }
+-keep class com.example.chat.model.Message { *; }
+-keep class com.example.chat.model.User { *; }
 
 # For using GSON @Expose annotation
 -keepattributes *Annotation*

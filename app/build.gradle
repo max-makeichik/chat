@@ -65,10 +65,11 @@ dependencies {
   compile('com.mikepenz:materialdrawer:4.4.8@aar') {
     transitive = true
   }
-
   compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
     transitive = true;
   }
+
+  compile 'com.squareup.okhttp:logging-interceptor:2.6.0'
   compile 'com.squareup.okhttp:okhttp:2.5.0'
   compile 'com.squareup.picasso:picasso:2.5.2'
 

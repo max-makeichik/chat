@@ -1,76 +1,74 @@
 package com.example.chat.model;
 
-import java.util.Date;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-/**
- * Created by max on 02-Oct-15.
- */
-public class ChatMessage {
+import com.google.gson.annotations.SerializedName;
+
+public class ChatMessage implements Parcelable {
 
   public static final int TYPE_MY_MESSAGE = 0;
   public static final int TYPE_NOT_MY_MESSAGE = 1;
   public static final int TYPE_MY_IMAGE = 2;
   public static final int TYPE_NOT_MY_IMAGE = 3;
 
-  private int id;
-  private String name;
-  private String text;
-  private String imageUrl;
-  private Date updatedAt;
+  @SerializedName("User")
+  private User user;
+  @SerializedName("Message")
+  private Message message;
 
-  public ChatMessage() {
-  }
-
-  public ChatMessage(String name, String text, String imageUrl, Date updatedAt) {
-    this.name = name;
-    this.text = text;
-    this.imageUrl = imageUrl;
-    this.updatedAt = updatedAt;
+  public ChatMessage(User user, Message message) {
+    this.user = user;
+    this.message = message;
   }
 
   @Override
   public String toString() {
     return "ChatMessage{" +
-        "id=" + id +
-        ", text='" + text + '\'' +
-        ", imageUrl='" + imageUrl + '\'' +
-        ", updatedAt=" + updatedAt +
+        "user=" + user +
+        ", message=" + message +
         '}';
   }
 
-  public java.util.Date getUpdatedAt() {
-    return updatedAt;
+  public User getUser() {
+    return user;
   }
 
-  public void setUpdatedAt(java.util.Date updatedAt) {
-    this.updatedAt = updatedAt;
+  public void setUser(User user) {
+    this.user = user;
   }
 
-  public String getImageUrl() {
-    return imageUrl;
+  public Message getMessage() {
+    return message;
   }
 
-  public void setImageUrl(String imageUrl) {
-    this.imageUrl = imageUrl;
+  public void setMessage(Message message) {
+    this.message = message;
   }
 
-  public String getText() {
-    return text;
+  protected ChatMessage(Parcel in) {
+    user = in.readParcelable(User.class.getClassLoader());
   }
 
-  public void setText(String text) {
-    this.text = text;
+  public static final Creator<ChatMessage> CREATOR = new Creator<ChatMessage>() {
+    @Override
+    public ChatMessage createFromParcel(Parcel in) {
+      return new ChatMessage(in);
+    }
+
+    @Override
+    public ChatMessage[] newArray(int size) {
+      return new ChatMessage[size];
+    }
+  };
+
+  @Override
+  public int describeContents() {
+    return 0;
   }
 
-  public int getId() {
-    return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
-  }
-
-  public String getUsername() {
-    return name;
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+    dest.writeParcelable(user, flags);
   }
 }

@@ -1,10 +1,12 @@
 package com.example.chat.view;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
@@ -48,7 +50,8 @@ public class BubbleDrawable extends Drawable {
   private void drawBubbleStroke(Canvas canvas) {
     mPaint.setStyle(Paint.Style.STROKE);
     mPaint.setStrokeWidth(strokeWidth);
-    mPaint.setColor(strokeColor);
+    //mPaint.setColor(strokeColor);
+    mPaint.setColor(Color.RED);
     drawPath(canvas);
   }
 
@@ -111,7 +114,7 @@ public class BubbleDrawable extends Drawable {
 
   @Override
   public int getOpacity() {
-    return 255;
+    return PixelFormat.TRANSPARENT;
   }
 
   @Override
@@ -126,11 +129,9 @@ public class BubbleDrawable extends Drawable {
 
   @Override
   public boolean getPadding(Rect padding) {
-    Log.d(TAG, "getPadding " + padding.bottom + ", " + padding.top);
+    //Log.d(TAG, "getPadding " + padding.bottom + ", " + padding.top);
     padding.set(mBoxPadding);
 
-    /*// Adjust the padding to include the height of the pointer
-    padding.bottom += mPointerHeight;*/
     return true;
   }
 
@@ -141,19 +142,20 @@ public class BubbleDrawable extends Drawable {
     super.onBoundsChange(bounds);
   }
 
-  public void setPointerSizes(int pointerWidth) {
-    mPointerWidth = pointerWidth;
-    mPointerHeight = (float) Math.sqrt((double) (pointerWidth * pointerWidth / 2)); //  base of equilateral triangle
-    Log.d(TAG, "mPointerHeight " + mPointerHeight);
-  }
-
   public void setPadding(int left, int top, int right, int bottom) {
-    Log.d(TAG, "setPadding");
+    //Log.d(TAG, "setPadding");
     mBoxPadding.left = left;
     mBoxPadding.top = top;
     mBoxPadding.right = right;
     mBoxPadding.bottom = bottom;
   }
+
+  public void setPointerSizes(int pointerWidth) {
+    mPointerWidth = pointerWidth;
+    mPointerHeight = (float) Math.sqrt((double) (pointerWidth * pointerWidth / 2)); //  base of equilateral triangle
+    //Log.d(TAG, "mPointerHeight " + mPointerHeight);
+  }
+
 
   public void setPointerSizes(int pointerWidth, int pointerHeight) {
     mPointerWidth = pointerWidth;

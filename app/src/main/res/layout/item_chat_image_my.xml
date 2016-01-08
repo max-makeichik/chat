@@ -1,39 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
     android:id="@+id/linear"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="3dp"
     android:layout_marginTop="4dp"
     android:gravity="right"
+    android:layout_gravity="right"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/date"
         style="@style/ChatItemDate"
-        android:paddingRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="right|bottom"/>
+        android:gravity="right|bottom"
+        android:paddingRight="10dp"/>
 
-    <FrameLayout
-        android:id="@+id/bubble_layout"
+    <ImageView
+        android:id="@+id/image"
+        style="@style/ChatItemImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="@dimen/chat_item_min_width"
-        android:orientation="vertical"
-        android:layout_gravity="right">
-
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="@dimen/chat_item_image_start_padding"
-            android:paddingLeft="@dimen/chat_item_image_padding"
-            android:paddingTop="@dimen/chat_item_image_padding"
-            android:paddingBottom="@dimen/chat_item_image_padding"
-            style="@style/ChatItemImage"/>
-
-    </FrameLayout>
+        android:paddingRight="5dp"/>
 
 </LinearLayout>
