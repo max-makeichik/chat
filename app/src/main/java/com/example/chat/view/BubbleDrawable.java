@@ -1,7 +1,6 @@
 package com.example.chat.view;
 
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Matrix;
 import android.graphics.Paint;
@@ -50,8 +49,8 @@ public class BubbleDrawable extends Drawable {
   private void drawBubbleStroke(Canvas canvas) {
     mPaint.setStyle(Paint.Style.STROKE);
     mPaint.setStrokeWidth(strokeWidth);
-    //mPaint.setColor(strokeColor);
-    mPaint.setColor(Color.RED);
+    mPaint.setColor(strokeColor);
+    //mPaint.setColor(Color.RED);
     drawPath(canvas);
   }
 

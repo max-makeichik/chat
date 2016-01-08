@@ -41,6 +41,7 @@
         android:id="@+id/bubble_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="@dimen/chat_item_min_width"
         android:orientation="vertical">
 
         <TextView

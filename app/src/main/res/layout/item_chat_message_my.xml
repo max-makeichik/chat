@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     android:id="@+id/linear"
-    android:background="@color/md_red_500"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -15,13 +14,16 @@
         android:paddingRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="right|bottom"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
 
     <FrameLayout
         android:id="@+id/bubble_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/date"
         android:minWidth="@dimen/chat_item_min_width"
         android:orientation="vertical">
 
@@ -34,4 +36,4 @@
             android:layout_height="wrap_content"/>
     </FrameLayout>
 
-</LinearLayout>
+</RelativeLayout>

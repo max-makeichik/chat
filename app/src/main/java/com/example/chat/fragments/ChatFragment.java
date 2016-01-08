@@ -61,7 +61,7 @@ public class ChatFragment extends Fragment {
     setHasOptionsMenu(true);
     setRetainInstance(true);
     if (savedInstanceState != null) {
-      //chatList = savedInstanceState.getParcelableArrayList(CHAT_LIST_KEY);
+      chatList = savedInstanceState.getParcelableArrayList(CHAT_LIST_KEY);
       message = savedInstanceState.getString(MESSAGE_TEXT_KEY);
     }
 
@@ -127,7 +127,7 @@ public class ChatFragment extends Fragment {
   public void displayChatMessages(List<ChatMessage> chatMessages) {
     //Log.d(TAG, "chatItems messages " + messages);
 
-    /*if (chatMessages.size() == 0) {
+    if (chatMessages.size() == 0) {
       if(chatList.size() == 0)
         recyclerView.setEmptyView(view.findViewById(android.R.id.empty));
       return;
@@ -136,12 +136,12 @@ public class ChatFragment extends Fragment {
     chatList.clear();
     chatAdapter.notifyDataSetChanged();
     for (ChatMessage chatMessage : chatMessages) {
-      if(chatMessages.indexOf(chatMessage) == 0) {  //  fixme
+      //if(chatMessages.indexOf(chatMessage) == 0) {
         chatList.add(chatMessage);
         chatAdapter.notifyItemInserted(chatMessages.indexOf(chatMessage));
         scrollToNewMessageOrShowBar();
-      }
-    }*/
+      //}
+    }
   }
 
   private void scrollToNewMessageOrShowBar() {
@@ -173,7 +173,7 @@ public class ChatFragment extends Fragment {
   public void onSaveInstanceState(Bundle outState) {
     super.onSaveInstanceState(outState);
     Log.d(TAG, "onSaveInstanceState");
-    //outState.putParcelableArrayList(CHAT_LIST_KEY, chatList);
+    outState.putParcelableArrayList(CHAT_LIST_KEY, chatList);
     outState.putString(MESSAGE_TEXT_KEY, messageEditText.getText().toString());
   }
 
